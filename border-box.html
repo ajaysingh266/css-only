@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./border-box.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        1. Block Level Elements
+        2. Inline Elements
+        3. Inline Block Elements
+    -->
+    <!-- Block VS Inline Elements -->
+    <!-- Eg of Block Level Elements:- 
+heading(1-6), p, div, ul, li, form, article, aside, main, nav  
+block level hmesha new line se start honge aur complete utni width lenge jitne unke available hai 
+*// block element ko inline element mien change karne ke liye 
+display:inline//*
+-->
+
+    <!-- Eg of Inline Elements:- 
+span, img, a, textarea  
+ek hi line mien aate hai, vo utni hi width lete hai jitni required hoti hai,extra ni lete
+Inline elements margin left & right lete hai, top & bottom ni lete
+padding add ho jati hai sb, but top and bottom overflow bi kar jati hai
+*// Inline element ko block element mien change karne ke liye 
+display:block//*
+-->
+    <!-- <hr> for creating line -->
+    <!-- <h2>This is heading</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quas ducimus deserunt tempore deleniti perferendis 
+    quia. Totam, eligendi vel, placeat distinctio culpa veritatis consequatur perspiciatis, recusandae velit repellat 
+    sed incidunt?</p> -->
+    <!-- <form>
+        <input type="email" placeholder="Email" required> <br> <br>
+        <input type="password" placeholder="Password" required> <br> <br>
+        <input type="submit" value="sign In">
+    </form> -->
+
+    <!-- first child & first-of-type  -->
+    <!-- last child & last-of-type -->
+    <!-- nth child -->
+    <header>
+        <p>First Heading</p>
+        <p>Second Heading</p>
+        <p>Third Heading</p>
+        <h3>H3 Heading</h3>
+    </header>
+    
+    <header>
+        <h1>H1 heading</h1>
+        <p>First Heading</p>
+        <p>Second Heading</p>
+        <p>Third Heading</p>
+    </header>
+    <p>I am direct child</p>
+    <p>I am also direct child</p>
+
+    <div class="container">
+        <p>Firt para inside container div</p>
+        <p>Second para inside container div</p>
+        <p>Third para inside container div</p>
+
+    </div>
+
+    <!-- :not, :root & :empty pseudo classes -->
+    <!-- <h1>My Heading</h1> -->
+    <!-- <div></div> -->
+    <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi sequi quam saepe. Nobis labo.</p> -->
+    <!-- <div></div> -->
+    <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.  quam saepe. Nobis labo.</p> -->
+    <!-- ::before & ::after pseudo elements -->
+    <p class="cool">this is paragraph</p>
+    <h1 class="main-heading">this is h1 heading</h1>
+
+
+</body>
+
+</html>

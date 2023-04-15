@@ -1,0 +1,22 @@
+/* transition means kisi ek cheez ka dusri cheez mien change hona */
+/* kisi ek particular state ka change ya update hona kisi dusri state mien*/
+/* you can say when we change the state of the element 
+eg:- hover state, focus state */
+
+.box{
+    width: 100px;
+    height: 100px;
+    background: red;
+    /* transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: ease-in; */
+
+    /*  short-hand property*/
+    /* we can add more property by seperating comma */
+    /* transition: background 500ms ease-in-out, width 1s ease-in-out; */
+    transition: all 1s ease-in-out;
+}
+.box:hover{
+    background: lightcoral;
+    width: 300px;
+}

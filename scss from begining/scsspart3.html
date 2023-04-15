@@ -1,0 +1,106 @@
+// Sass Functions //
+// syntax of sass function //
+// @funtion function-name($value){
+   }
+// example
+// $container-width:1200;
+//  @function half($width){
+    @return $width/2 +px;
+}
+//  @function one-third($width){
+    @return $width/3 +px;
+}
+//  @function one-fourth($width){
+    @return $width/4 +px;
+}
+//  .half-width{
+    width: half($container-width);
+}
+
+// Number Functions
+// Inbuild functions of Sass//
+// Numbers
+// Strings
+// Colors
+// list-style
+// selectors
+// Introspection
+
+// Number functions of Sass//
+// abs()        //always return absolute value
+// ceil()       // if we have decimal value then always return upper round of value
+// floor()      // if we have decimal value then always return lower round of value
+// round()      // if we have decimal value below .5 then return lower round of value, & if we have decimal value above .5 then return upper round of value
+// max()        // if we have two or more values than always retun greater value
+// min()         // if we have two or more values than always retun minimum value
+// comparable()    // it comapre unit whether it is comaparable or not i.e true or false
+// percentage()     // always calculate percentage
+// random()         // always return random value between 0 to 1    // if we provide some value than it gives random value between 0 to that value
+// unit()           // retuns unit
+// unitless()       // always return boolean. if unit provide then always return false. if unit not provided then retun true
+
+// example//
+.test{
+    margin:abs(-10px);                  // return +10px
+    margin:ceil(4.3px);                 // return 5px 
+    margin:floor(4.3px);                 // return 4px 
+    margin:round(4.5px);                 // return 5px 
+    margin:round(4.3px);                 // return 4px 
+    margin:max(1px, 4px, 50px );         // return 50px 
+    margin:min(1px, 4px, 50px );         // return 1px 
+    margin:percentage(0.2);                 // return 20%
+    margin:comparable(4cm, 1mm);                 // return true 
+    margin:comparable(4px, 1mm);                 // return false 
+    margin:random();                 // return 0.435435435;
+    margin:random(10);                 // return 2;
+    margin:unit(10px);                 // return "px";
+    margin:unit(10px * 100em);                 // return "px*em";
+    margin:unitless(100em);                 // return false;
+    margin:unitless(100);                 // return true;
+}
+
+// String Functions //
+// quote()
+// str-index()
+// str-insert()
+// str-length()
+// str-slice()
+// to-upper-case()
+// to-lower-case()
+// unique-id()          // always return unique key of 9 charachter
+// unquote()
+
+//example //
+ 
+//  .test{
+    font-family:quote(Arial);               // retun "Arial"
+    font-family:unquote("Arial");           // return Arial
+    font-family:to-upper-case("Arial");           // return Arial
+    font-family:to-lower-case("ARIAL");           // return arial  
+    font-family:str-length("ARIAL");           // return 5   
+    font-family:str-index("Helvetica Neue", "e");           // return 2                   
+    font-family:str-insert("Helvetica Neue", "Mono", 10);           // return "Helvetica Mono Neue" 
+    font-family:str-slice("Helvetica Neue", 3);           // return "lvetica Neue"                  
+    font-family:unique-id();           // return uebealo6g;                  
+}
+
+// Color Functions //
+// lighten()
+// darken ()
+// adjust-hue()
+// saturate()
+// desaturate()
+// mix()
+// transparentize()
+
+// example //
+//  $base-color:pink;
+//  .test{
+    background-color:darken($base-color, 30);               // first parameter is color, n second parameter is percentage. kitna percente jada karna
+    background-color:lighten($base-color, 30);              // first parameter is color, n second parameter is percentage. kitna percente kam karna
+    background-color:adjust-hue($base-color, 30);           // first parameter is color, n second parameter is degree. increase color with same color
+    background-color:saturate($base-color, 30);             // saturate basically shows brightness of color    
+    background-color:desaturate($base-color, 30);           // darkness kam karna, grey side jana
+    background-color:mix($base-color,red, 30);              // it mix two color, third parameter is kitne percent mix karna hai second color mien
+    background-color:transparentize($base-color, 0.3);       // color ko transparent karne ke liye
+}

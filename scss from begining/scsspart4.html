@@ -1,0 +1,94 @@
+// list in Sass : it like array in JS
+//  $list: 10px, 20px, 30px;
+//  $list: 10px 20px 30px;
+//  $list: [10px, 20px, 30px];
+
+// List function of Sass
+// length()
+// nth()                      // return element of given index
+// set-nth()                   // add element with provide index no.
+// join()                    // join two list 
+// append()                 // only add one value at the last of list
+// zip()                     // add list one item to list two item
+// index()                  //always return index. this is used for searching any value index
+// list-separator()         // list is either seprated by comma or space. list seperator describes which type of seperator used
+// is-bracketed()           // always check square bracket is used or not return boolean value
+
+// example //
+//  $list: 10px, 20px, 30px;
+//  $list2: 40px, 50px, 60px;
+// .test{
+    padding: length($list);                 // return 3
+    padding: nth($list, 2);                 // return 20px
+    padding: set-nth($list, 2, 2em);        // return 10px 2em 30px
+    padding: join($list, $list2);           // return 10px 20px 30px 40px 50px 60px
+    padding: append($list, 70px);           // return 10px 20px 30px 70px
+    padding: zip($list, $list2);           // return 10px 40px, 20px 50px, 30px 60px
+    padding: list-separator($list);           // return comma;
+    padding: is-bracketed($list);           // return false;
+}
+
+// Selector Functions//
+// selector-nest
+// selector-append              // make a single selector
+// selector-replace             // replace something
+// is-superselector             // it does not modify anything. it uses for test and return only boolean value
+// simple-selectors             // it seperates combine class or selector
+// selector-unify               // make a match of two selector
+// selector-extend              // make a match of two selector and make auto combination
+
+// example//
+// $selector : selector-nest("ul", "li");
+//  #{$selector}{
+    width:10px;                     // return ul li {width:10px;}           // this output for selector only
+}
+// $selector : selector-nest(".abc", ".xyz", "p");
+//  #{$selector}{
+    width:10px;                     // return .abc p, .xyz p {width:10px;}           // this output for selector on class
+}
+// $selector : selector-append("a", ".active");
+//  #{$selector}{
+    width:10px;                     // return a.active {width:10px;}           
+}
+// $selector : selector-replace("a.abc", ".abc", ".link");
+//  #{$selector}{
+    width:10px;                     // return a.link {width:10px;}           
+}
+// $selector : is-superselector("a", "a.active");
+//  #{$selector}{
+    width:10px;                     // return true {width:10px;}            // but we directlly not use this return, it uses in conditional statement           
+}
+// $selector : simple-selectors("a.abc");
+//  #{$selector}{
+    width:10px;                     // return a, .abc {width:10px;}   
+}
+// $selector : selector-unify("a", ".active");
+//  #{$selector}{
+    width:10px;                     // return a.active{width:10px;}           
+}
+// $selector : selector-extend("a.disable","a", ".link");
+//  #{$selector}{
+    width:10px;                     // return a.disable, .disable.link{width:10px;}           
+}
+
+// Map Functions of Sass//
+// map-get()
+// map-merge()
+// map-remove()
+// map-keys()
+// map-values()
+// map-has-key()                always return boolean
+
+// examples //
+// $font-weights:("regular":400, "medium":500, "bold":700)
+// $light-weight:("lightest":100, "light":300);
+// $merge: map-merge($font-weights, $light-weights);
+// $mr: map-remove($font-weights, "regular");
+//.test{
+    font-weight:map-get($font-weight, "medium");            return {font-weight:500} 
+    font-weight:map-keys($font-weight);                     return  {font-weight:"regular","medium","bold"}
+    font-weight:map-values($font-weight);                   return  {font-weight:"400","500","700"}
+    font-weight:map-keys($merge);                       // not provide direct ans that's why third variable used then map-keys used for to check keys
+    font-weight:map-values($mr);                        // return only remaining two values 500, 700
+}
+

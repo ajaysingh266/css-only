@@ -1,0 +1,142 @@
+// Syntactically Awesome Style Sheet
+// Extension of CSS
+// CSS pre-processor
+// Easy to manage
+// increase Coding Speed
+// cross brower Compatible
+
+// How to use Sass file in HTML
+// We can't use sass file in HTML.
+// brower can't understand sass code.
+// when we create sassfile, we need sass compiler, compiler convert that file to normal css file
+//
+
+
+// features of Sass //
+// variables
+// nesting
+// partial & imports
+// mixins
+// Extends
+// Operators
+// Functions
+// Conditional Directives
+// Loops
+
+// How to write Sass code:
+// Scss Syntax    & Sass Syntax
+
+// Scss syntax :nav{
+    ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+    li{display:inline-block;}
+}
+
+// Sass Syntax
+// nav
+//   ul
+//   margin:0
+//   padding:0
+//   list-style:none;
+
+//   li{display:inline-block;}
+
+// Sass Variables//
+// body{
+    background: red;
+    font-family:aria;
+}
+// h1{
+    color:red;
+font-size:20px;
+}
+// span{
+    color:red;
+}
+// variable declare//
+// $primary-color:red;
+// $border-color: black;
+// $main-font: arial
+
+
+// Sass Nesting //
+nav{
+    ul{
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+    li{display:inline-block;}
+}
+ // Sass partial & Imports//
+ // save _header.Scss
+ // import file @import "header";
+
+
+ // Mixins //
+ // .abc{
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+ }
+ // .xyz{
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+ }
+// mixins work as function
+// @mixin bd-radius($value(parameter is optional) :5px(default value)){
+    -webkit-border-radius:$value;
+    -moz-border-radius:$value;
+    border-radius:$value;
+}
+// .abc{
+    @include bd-radius(5px);
+}
+// .xyz{
+    @include bd-radius(10px);
+}
+// @mixin box-shadow($top, $left, $blur, $color){
+    -webkit-box-shadow:$top $left $blur $color;
+}
+// combine selectors never used in mixin
+
+// Sass Extends //
+//if same properties repeats again and again
+
+// for eg.
+// .abc{
+    color:red;
+    font-size:5px;
+    line-height:5px;
+    text-trnasform:uppercase;
+}
+
+// .xyz{
+    color:green;
+    @extend .abc;
+}
+// .efg{
+    color:blue;
+    @extend .abc;
+}
+// anotherway of extends
+// %abc{
+    color:red;
+    font-size:5px;
+    line-height:5px;
+    text-trnasform:uppercase;
+}
+
+// .xyz{
+    color:green;
+    @extend %abc;
+}
+// .efg{
+    color:blue;
+    @extend %abc;
+}
+

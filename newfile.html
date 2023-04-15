@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form onsubmit={submitForm}>
+            <input type="email" placeholder="enter email"/>
+            <input type="password" placeholder="enter password"/>
+            <button type="submit">submit</button>
+        </form>
+    </body>
+    <script>
+ var submitForm =(e)=>{
+console.log(e.target.value);
+ }
+    </script>
+</html>

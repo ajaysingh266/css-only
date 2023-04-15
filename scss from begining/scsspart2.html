@@ -1,0 +1,67 @@
+// types of operators in Sass
+// Equality
+// Relational
+// Numeric
+// String
+// Boolean
+
+//Equality & Relational Operators //
+//Equality Operators
+// ==   Equal to
+// !=   not Equal to
+
+// always give ans True or False
+
+// Relational Operators//
+//  < less than
+//  > greater than
+//  <= less than equal to
+//  >= greater than equal to
+
+//  both opertors basically used in if Conditional
+//  if() function
+
+//String & Numeric operators//
+// String operators//
+// + (concatenation)
+// 10+px =10px
+
+// Numeric Operators//
+//  + - Addition
+//  - = Substraction
+//  * - multiplication
+//  / - division
+//  % - Modulas or Remainder
+
+// example
+// $var:10;
+// $var:2;
+
+//  .test{
+    padding: $var1 + px;
+}
+
+//  .test{
+    padding: $var1 + $var2 +px;
+}
+
+
+//  Interpolation in Sass: //
+// basically it is used to concatenate the selectors or class name //
+// syntax of Interpolation is #{}   //
+//  for eg.//
+//  margin-#{$posiion}:20px
+
+// @mixin margin($position, $unit){
+    margin-#{$position}: $unit+px
+}
+//  .test{
+    @include margin(left,10);
+}
+
+// @mixin set-icon($name){
+    .icon-#{$name}{
+        background-image:url("/icons/#{$name}.png");
+    }
+}
+// @include set-icon(duck);

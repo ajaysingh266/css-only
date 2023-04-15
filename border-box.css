@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* box-sizing:border-box; */
+
+/* p { */
+    /* default font weight 400 */
+    /* font-weight: 500; */
+    /* default font size 16px */
+    /* font-size: 20px; */
+    /* line height means individual line height or paragraph line height */
+    /* line-height: 30px; */
+    /* word spacing for increase or decrease space */
+    /* word-spacing: 10px; */
+    /* letter spacing  */
+    /* letter-spacing: 2px; */
+/* } */
+
+/* pseudo classes ko hum use karte hai kisi element ki special state ko define karne ke liye  */
+/* link, visited, hover, active */
+
+/* visited state, jb kisi link pe click karke vapas aate hai to uska color change milta hai */
+
+/* input:focus{
+    padding: 5px;
+}
+input:required{
+    color: red;
+} */
+
+/* <!-- first child & first-of-type  --> */
+/* p:first-child{
+    color: red;
+} */
+/* p:first-of-type{
+    color: green;
+} */
+/* last child & last-of-type */
+/* p:last-child{
+    color: blue;
+} */
+/* p:last-of-type{
+    color: aqua;
+} */
+/* nth child ye dusre child ka color change karega*/
+/* p:nth-child(2){
+    color: blueviolet;
+} */
+/* nth child ye muliple of 2 wale child ka color change karega aur odd number ke liye 2n+1*/
+/* p:nth-child(2n){
+    color: yellowgreen;
+} */
+/* p:nth-of-type(2){
+    color: brown;
+} */
+
+/* <!-- :not, :root & :empty pseudo classes --> */
+/* paranthesis mien classname, id, element */
+/* vo sare para unko chor ke sabko kar do blue */
+/* agar body ni lagaye to p tag body ka color blue inherit kar lega */
+/* body :not(p){
+    color: blue;
+} */
+
+/* div:empty{
+    background: #222;
+    border: 2px solid red;
+} */
+/* 
+:root{
+
+} */
+
+/* pseudo elements */
+/* all para first letter */
+/* p::first-letter{
+    font-size: 24px;
+} */
+/* all para first line */
+/* p::first-line{
+    font-size: 24px;
+} */
+/* selection for eg jaise select karte hai to uska bg color, text color change kar sakte hai */
+/* p::selection{
+    background: #222;
+    color: aqua;
+} */
+
+.cool::before{
+    content: "hello ";
+    color: green;
+    border: 1px solid black;
+    display: block;
+}
+
+.cool::after{
+    content: "hello ";
+    color: green;
+    border: 1px solid black;
+    display: block;
+}
+
+/* pseudo elements cannot be used with img, br, input or any other replaced elements */

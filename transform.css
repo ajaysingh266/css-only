@@ -1,0 +1,19 @@
+.box {
+    width: 100px;
+    height: 100px;
+    font-size: 1.5rem;
+    background: cyan;
+    margin: 100px auto;
+    /* with the help of tranform, element ko rotate, skew, scale, translate */
+    /*  for rotate */
+    transition: transform 1s ease-in-out;
+    
+}
+/* scale means element ko grow karna */
+/* translate ka means hai aapko iske position change karne hai */
+.box:hover{
+    /* transform: rotate(20deg); */
+    /* transform: scaleX(2); */
+    /* transform: scaleY(2); */
+
+}

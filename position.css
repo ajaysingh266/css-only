@@ -1,0 +1,33 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    position: relative;
+    width: 800px;
+    border: 8px solid green;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+.container h1{
+    border: 4px solid red;
+    background: lightyellow;
+    /* position: relative;
+    top: 150px;
+    left: 50px;
+    z-index: -1; */
+/* for doing this div in center, give position absolute, and parent relative */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform se content apne axis ko maan ke karta hai, x-axis then y-axis */
+    transform: translate(-50%, -50%);
+}
+.container h3{
+    background: black;
+    color: #fff; 
+}
+.container p{
+    border: 4px solid purple;
+    background: lightcyan;
+}

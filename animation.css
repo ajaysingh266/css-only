@@ -1,0 +1,88 @@
+.box{   
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation-name: change-bg-color;   /* to define animation name*/
+    animation-duration: 5s;             /* kitne duration mien animation apply(means jo bi apply karna uska time) karne hai.*/
+    animation-delay: 3s;                /* kitne duration delay karne*/
+    /*agar hum chahte hai animation repeat karna to*/
+    /* animation-iteration-count: 3; */
+    /* agar hum chahte hai animation hone ke bad vhi ruk jaye, default mode mien na aaye */
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-bg-color{
+    /* keyframe ye decide karte hai humare liye ki kisi time pe humare element kis tarah se dikhega */
+    from{
+        background: red;                    /* kis style se change karna */
+    }
+    to{
+        background: black;                  /* kis style mien change karna*/
+    }
+    /* from to ke alawa bi bahot saare elements hote hai, hum particular
+    time bta sakte hai ki humara jo element hai vo kis tarah se change hoga */
+}
+
+.box2{
+    width: 15px;
+    height: 10px;
+    background: blue;
+    animation-name: grow-width;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+@keyframes grow-width{
+    from{
+        width:0;
+    } to {
+        width: 300px;
+    }
+}
+
+.box3{ 
+    width: 50px;
+    height: 50px;
+    background: rebeccapurple;
+    border-radius: 50%;
+    /* animation-name: move-around; */
+    position:relative;
+    /* animation-duration: 10s; */
+    /* infinite time */
+    /* animation-iteration-count: infinite; */
+    /* animation-delay: 2s; */
+    /* ease-in se slow start hogi fir normal speed se chalegi */
+    /* ease-out se start normal speed se hogi, end slow hogi */
+    /* ease-in-out se start n end dono slow hogi */
+    /* animation-timing-function: ease-in ; */
+
+    /* short-hand */
+    /* animation name, duration, fill-mode, delay, iteration-count,timing-function */
+    animation: move-around 5s forwards 2s infinite ease-in ;
+}
+
+@keyframes move-around{
+    0%{
+        top:0;
+        left:0;
+        background: cyan;
+    }
+    25%{
+        top:0;
+        left:300px;
+    }
+    50%{
+        top:300px;
+        left:300px;
+        background: yellow;
+    }
+    75%{
+        top:300px;
+        left:0;
+        background: green;
+    }
+    100%{
+        top:0;
+        left:0;
+    }
+}
